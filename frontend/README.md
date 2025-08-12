@@ -1,3 +1,28 @@
+# CricIntel Frontend
+
+This React app uses Vite + Tailwind CSS and connects to the backend at `VITE_API_BASE`.
+
+## Setup
+
+1. Install dependencies:
+```bash
+npm install
+```
+
+2. Add a `.env` file (optional) to override the backend URL:
+```bash
+VITE_API_BASE=http://localhost:5000
+```
+
+3. Run the dev server:
+```bash
+npm run dev
+```
+
+## Notes
+- Tailwind is configured in `tailwind.config.js` and `postcss.config.js`.
+- Global styles are in `src/index.css`.
+- Main UI is in `src/App.jsx`.
 # React + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.

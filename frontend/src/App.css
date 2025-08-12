@@ -4,6 +4,12 @@
   padding: 2rem;
   text-align: center;
 }
+/* You can keep this file minimal; Tailwind will handle most styles. */
+.gradient-bg {
+  background: radial-gradient(1200px 600px at 10% 10%, rgba(62,145,255,0.15), transparent 60%),
+              radial-gradient(900px 500px at 90% 20%, rgba(30,74,161,0.12), transparent 60%),
+              radial-gradient(800px 500px at 10% 90%, rgba(29,63,127,0.10), transparent 60%);
+}
 
 .logo {
   height: 6em;
