@@ -1,5 +1,5 @@
 import { useState } from 'react'
-
+import LoadingPage from "./LoadingPage";
 const API_BASE = import.meta.env.VITE_API_BASE || 'https://s84-kartikay-crickintel.onrender.com';
 
 function App() {
@@ -7,6 +7,7 @@ function App() {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState('');
   const [insight, setInsight] = useState('');
+  const [ready, setReady] = useState(false);
   const [method, setMethod] = useState('zero-shot');
   const [temperature, setTemperature] = useState(0.7);
   const [topK, setTopK] = useState(40);
@@ -88,7 +89,7 @@ function App() {
     });
   };
 
-  return (
+  return ready ? (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       {/* Animated Background */}
       <div className="fixed inset-0 overflow-hidden">
@@ -811,7 +812,10 @@ function App() {
         }
       `}</style>
     </div>
-  )
+    ) : (
+    // ⏳ Show LoadingPage until backend is ready
+    <LoadingPage onReady={() => setReady(true)} />
+  );
 }
 
 export default App
