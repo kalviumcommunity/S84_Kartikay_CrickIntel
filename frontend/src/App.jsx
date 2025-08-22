@@ -748,7 +748,6 @@ function App() {
             </div>
             
             <div className="flex items-center space-x-6 text-sm text-gray-400">
-              <span>© 2024 CricIntel. All rights reserved.</span>
               <span>Built with React + Tailwind CSS + Gemini AI</span>
             </div>
           </div>
