@@ -1,6 +1,6 @@
 import { useState } from 'react'
 
-const API_BASE = import.meta.env.VITE_API_BASE || 'http://localhost:5000';
+const API_BASE = import.meta.env.VITE_API_BASE || 'https://s84-kartikay-crickintel.onrender.com';
 
 function App() {
   const [prompt, setPrompt] = useState('');
